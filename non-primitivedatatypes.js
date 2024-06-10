@@ -15,4 +15,4 @@ const myFunction = function(){
     console.log("Hello World")
 }
 
-console.log(myFunction())
+console.log(myFunction(),)
