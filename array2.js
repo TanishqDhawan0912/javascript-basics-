@@ -22,3 +22,4 @@ const dc_heros = ["superman" , "flash" , "batman"]
 // console.log(Array.from("hello i am good"))
 
 console.log(Array.of(100,101,102))
+
