@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <!-- one way to use event listener -->
+      <!-- <li onclick="alert('ohh')">first li</li> -->
+
+      <li>first li</li>
+      <li>second li</li>
+      <li>third li</li>
+      <li>fourth li</li>
+      <li>fifth li</li>
+    </ul>
+  </body>
+  <script>
+    //  second way to use event listener
+    // document.querySelector("li:nth-child(1)").onclick=function(){
+    //     alert('ohh')
+    // }
+
+    // third and best way to use event listener
+    // document.querySelector("li:nth-child(1)").addEventListener('click',function(){
+    //     alert('ohh')
+    // })
+
+    // document.querySelector("li:nth-child(2)").addEventListener('click',function(e){
+    //     console.log(e)
+    // })
+
+    // document.querySelector("ul").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("ul clicked");
+    //   },
+    //   false
+    // ); // bubbling phase
+
+    // document.querySelector("li:nth-child(3)").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("third clicked");
+    //     e.stopPropagation();
+    //   },
+    //   false
+    // );
+
+    // document.querySelector("ul").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("ul clicked");
+    //   },
+    //   true
+    // ); // capturing phase
+
+    // document.querySelector("li:nth-child(3)").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("third clicked");
+    //   },
+    //   true
+    // );
+
+    document.querySelector("ul").addEventListener(
+      "click",
+      function (e) {
+        // console.log(e.target.parentNode);
+        const removeit = e.target;
+        // removeit.remove();
+        // removeit.parentNode.removeChild(removeit);
+      },
+      true
+    );
+  </script>
+</html>
