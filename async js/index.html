@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">Chai aur Code</h1>
+    <button id="startbtn">start</button>
+    <button id="stopbtn">stop</button>
+  </body>
+  <script>
+    const head = document.querySelector("#heading");
+    const stopbtn = document.querySelector("#stopbtn");
+    const startbtn = document.querySelector("#startbtn");
+    // const headchange = () => {
+    //   head.innerHTML = "Best Yt Channel";
+    // };
+    // const stopchange = () => {
+    //   console.log("stopped");
+    //   clearTimeout(headingchange);
+    // };
+
+    // const headingchange = setTimeout(headchange, 2000);
+    let intervalid;
+    const changing = () => {
+      console.log("hello");
+      console.log(Date.now());
+    };
+
+    const change = () => {
+      if (!intervalid) {
+        intervalid = setInterval(changing, 1000);
+      }
+    };
+
+    startbtn.addEventListener("click", change);
+    stopbtn.addEventListener("click", () => {
+      console.log("stopped");
+      clearInterval(intervalid);
+      intervalid = null;
+    });
+  </script>
+</html>
